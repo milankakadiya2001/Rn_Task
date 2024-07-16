@@ -22,19 +22,21 @@ export default function CHeader(props) {
           style={localStyles.backIconStyle}
           onPress={onPressBack || goBack}>
           <Ionicons
-            name="chevron-back-outline"
+            name="arrow-back-outline"
             size={moderateScale(24)}
             color={colors.textColor}
           />
         </TouchableOpacity>
       )}
-      <CText
-        numberOfLines={1}
-        align={'center'}
-        style={localStyles.titleText}
-        type={'S16'}>
-        {title}
-      </CText>
+      {!!title && (
+        <CText
+          numberOfLines={1}
+          align={'center'}
+          style={localStyles.titleText}
+          type={'S16'}>
+          {title}
+        </CText>
+      )}
       {!!rightIcon ? (
         rightIcon
       ) : (
@@ -60,9 +62,6 @@ const localStyles = StyleSheet.create({
   backIconStyle: {
     height: moderateScale(36),
     width: moderateScale(36),
-    borderWidth: moderateScale(1),
-    borderRadius: moderateScale(18),
-    borderColor: colors.bColor,
     ...styles.center,
   },
 });
