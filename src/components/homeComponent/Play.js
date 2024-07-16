@@ -165,7 +165,7 @@ export default function Play() {
         <View style={localStyles.priceContainer}>
           <CText
             type={'B16'}
-            style={styles.ph20}
+            style={styles.ph15}
             color={colors.primaryMain}
             align={'center'}>
             {item?.price?.display + ' pp'}
@@ -188,6 +188,7 @@ export default function Play() {
             keyExtractor={(item, index) => index.toString()}
             horizontal
             showsHorizontalScrollIndicator={false}
+            contentContainerStyle={styles.ph20}
           />
         )}
       </View>
@@ -261,7 +262,7 @@ const localStyles = StyleSheet.create({
     ...styles.mv10,
   },
   listMainContainer: {
-    ...styles.mh20,
+    ...styles.mr20,
     ...styles.selfStart,
     backgroundColor: colors.backgroundColor,
     borderRadius: moderateScale(16),
@@ -293,6 +294,7 @@ const localStyles = StyleSheet.create({
   },
   timeContainer: {
     ...styles.ph15,
+
     ...styles.pv15,
     ...styles.mr10,
     backgroundColor: colors.primaryLight,
