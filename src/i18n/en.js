@@ -20,4 +20,7 @@ export default {
   teeTime: 'Tee Time',
   empty: 'Empty',
   someThingWentToWrong: 'Something went to wrong',
+  coach: 'Coach',
+  date: 'Date',
+  privateClass: 'Private Class',
 };

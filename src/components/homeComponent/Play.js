@@ -82,7 +82,7 @@ export default function Play() {
       <TouchableOpacity
         onPress={() => onPressDayTime(item)}
         style={[
-          localStyles.dateContainer,
+          localStyles.dayTimeContainer,
           {
             backgroundColor:
               selectedDayTime?.name === item?.name
@@ -216,16 +216,14 @@ export default function Play() {
           showsHorizontalScrollIndicator={false}
           contentContainerStyle={localStyles.dateFlatList}
         />
-        {selectedTime?.hours?.length > 0 && (
-          <FlatList
-            data={selectedDayTime?.hours}
-            renderItem={renderTime}
-            keyExtractor={item => item.id.toString()}
-            horizontal
-            showsHorizontalScrollIndicator={false}
-            contentContainerStyle={localStyles.dateFlatList}
-          />
-        )}
+        <FlatList
+          data={selectedDayTime?.hours}
+          renderItem={renderTime}
+          keyExtractor={item => item.id.toString()}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          contentContainerStyle={localStyles.dateFlatList}
+        />
         {selectedTime?.resources?.length > 0 && (
           <FlatList
             data={selectedTime?.resources}
@@ -303,5 +301,14 @@ const localStyles = StyleSheet.create({
   bottomContainer: {
     ...styles.flex,
     ...styles.mb40,
+  },
+  dayTimeContainer: {
+    ...styles.ph35,
+    ...styles.pv10,
+    ...styles.mr10,
+    backgroundColor: colors.backgroundColor,
+    borderWidth: moderateScale(2),
+    borderColor: colors.primaryMain,
+    borderRadius: moderateScale(22),
   },
 });

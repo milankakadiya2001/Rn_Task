@@ -9,7 +9,7 @@ import {moderateScale} from '../../common/constants';
 import {colors, styles} from '../../themes';
 
 export default function CHeader(props) {
-  const {title, onPressBack, rightIcon = false, leftIcon = false} = props;
+  const {title, rightIcon = false, leftIcon = false} = props;
   const navigation = useNavigation();
 
   const goBack = () => navigation.goBack();
@@ -18,9 +18,7 @@ export default function CHeader(props) {
       {leftIcon ? (
         leftIcon
       ) : (
-        <TouchableOpacity
-          style={localStyles.backIconStyle}
-          onPress={onPressBack || goBack}>
+        <TouchableOpacity style={localStyles.backIconStyle}>
           <Ionicons
             name="arrow-back-outline"
             size={moderateScale(24)}

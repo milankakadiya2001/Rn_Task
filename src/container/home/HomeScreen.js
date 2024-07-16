@@ -86,10 +86,14 @@ export default function HomeScreen() {
     }
   };
 
+  if (loading) {
+    return <CLoader />;
+  }
+
   return (
     <CSafeAreaView>
       <CHeader rightIcon={<LikeIcon width={iconScale} height={iconScale} />} />
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <Image
           source={{uri: IMAGE_BASE_URL + homeData?.image}}
           style={localStyles.imageStyle}
