@@ -57,7 +57,7 @@ export default function About() {
   };
 
   return (
-    <View>
+    <View style={localStyles.mainContainer}>
       <View style={styles.ph15}>
         <View style={localStyles.rootContainer}>
           <RenderDescription title={strings.directions} icon={'location'} />
@@ -101,6 +101,9 @@ export default function About() {
 }
 
 const localStyles = StyleSheet.create({
+  mainContainer: {
+    backgroundColor: colors.textTertiary,
+  },
   rootContainer: {
     ...styles.rowSpaceAround,
     ...styles.mv10,

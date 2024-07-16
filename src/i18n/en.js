@@ -14,4 +14,10 @@ export default {
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec odio vitae nunc.',
   facilities: 'Facilities',
   location: 'Location',
+  selectTimeSlot: 'Select Date and available timeSlot',
+  firstTee: 'First Tee',
+  tenthTee: 'Tenth Tee',
+  teeTime: 'Tee Time',
+  empty: 'Empty',
+  someThingWentToWrong: 'Something went to wrong',
 };
